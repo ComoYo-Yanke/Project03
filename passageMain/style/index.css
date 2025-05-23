@@ -1,0 +1,367 @@
+body{
+    user-select: none;
+    height: 100%;
+    width: 100%;
+    .header{
+        position: absolute;
+        display: none;
+        justify-items: flex-end;
+        flex-direction:row;
+        flex-wrap: nowrap;
+        top: 0px;
+        left: 0;
+        width: 100%;
+        height: 65px;
+        background-color: #fff;
+        z-index: 100;
+        box-shadow: 0px 2px 5px #F2F2F2;
+        color: #676B73;
+        font-weight: 600;
+        .headerLogo{
+            position: absolute;
+            left: 45px;
+            top: 18px;
+            height: 33px;
+            width: 96px;
+            img{
+                object-fit: fill;
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .headTags{
+            display: inline-block;
+            margin: 35px;
+            position: relative;
+            left: 810px;
+            bottom: 20px;
+            font-size: 13px;
+            cursor: pointer;
+        }
+        #skipToMain{
+            
+        }
+        #skipToinformation{
+            
+        }
+        #skipToWe{
+            
+        }
+        #skipToJoinWe{
+            
+        }
+        #skipToNews{
+            
+        }
+        
+        #changeChAndEn{
+            font-size: 10px;
+            font-weight: 600;
+            height: 15px;
+            top: -10px;
+            .borderskip{
+                position: absolute;
+                height: 15px;
+                border-left: 1px solid #E6E7EB;
+                left: -40px;
+                top: 4px;
+            
+            }
+            /* display: flex; */
+            .CH{
+                display: flex;
+                position: relative;
+                right: 10px;
+            }
+            .omition{
+                box-sizing: border-box;
+                width: 30px;
+                border-top: 2px solid #dedede;
+                rotate: -40deg;
+                position: relative;
+                left: 0px;
+            }
+            .EN{
+                display: flex;
+                color: #E9E9E9;
+                position: relative;
+                left: 20px;
+            }
+        }
+    }
+    .content{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        .pages{
+            transition: transform 0.5s ease;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            box-sizing: border-box;
+            /* display: block; */
+            background-color: #4EA1D9;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        #introduction{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+            z-index: 10;
+            .showVideo{
+                display: none;
+                width: 100%;
+                height: 100vh;
+                position: absolute;
+                top: 0;
+                left: 0;
+                box-sizing: border-box;
+                background-color: rgba(0, 0, 0, 0.9);
+                z-index: 2;
+                opacity: 0;
+                /* visibility: hidden; */
+                transition: transform 0.5s ease, opacity 0.5s ease;
+                transform: translateY(0);
+                video{
+                    position: absolute;
+                    width: 62%;
+                    height: 60.5%;
+                    /* width: 60%; */
+                    left: 300px;
+                    top: 130px;
+                    z-index: 2;
+                    object-fit: fill;
+                }
+                .showVideoCut{
+                    cursor: pointer;
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    padding: 10px;
+                    right: 240px;
+                    top: 120px;
+                    transform-origin:  15, 15;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            .videoOfPassageMain01{
+                width: 100%;
+                height: 100%;
+                position: absolute; 
+                top: 0;
+                left: 0;
+                box-sizing: border-box;
+                /* 取消横纵比 */
+                object-fit: fill; 
+                
+            }
+            .mask{
+                width: 100%;
+                height: 100vh;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: rgba(0, 0, 0, 0.7);
+            }
+            .logo{
+                position: absolute;
+                left: 42px;
+                top: 8px;
+                img{
+                    
+                    width: 95.7px;
+                }
+            }
+            .bodylan{
+                position: absolute;
+                left: 570px;
+                top: 210px;
+                img{
+                    width: 420px;
+                    display: block;
+                }
+                
+            }
+            .bodylanFoot{
+                position: absolute;
+                left: 570px;
+                top: 480px;
+                .runBorder{
+                    cursor: pointer;
+                    width: 77px;
+                    display: flex;
+                    position: relative;
+                    align-self: center;
+                    left: 140px;
+                    top: 30px;
+                    transition: opacity 0.5s ease;
+                }
+                .cubeRun{
+                    cursor: pointer;
+                    /* background-color: #fff; */
+                    width: 0;
+                    height: 0;
+                    /* 实现一个等边三角形 */
+                    box-sizing: border-box;
+                    border-left: 7.5px solid transparent;
+                    border-right: 7.5px solid transparent;
+                    border-bottom: 11.99px solid #fff; 
+                    rotate: 90deg;
+                    position: relative;
+                    left: 173px;
+                    top: 5px;
+                    transition: border-color 0.5s ease;
+                }
+                .pointOut01{
+                    cursor: pointer;
+                    position: absolute;
+                    left: 172px;
+                    top: 150px;
+                    .mouse{
+                        width: 14px;
+                    }
+                    .arrowhead{
+                        width: 6px;
+                        height: 21px;
+                        position: relative;
+                        left: 4px;
+                        overflow: hidden;
+                        top: 8px;
+                        img{
+                            position: absolute;
+                            top: -8px;
+                            width: 6px;
+                            animation: arrowheadMoved 1.5s  infinite;
+                        }
+                    }
+                }
+            }
+        }
+        #aboutOfGame{
+            position: absolute;
+            background-color: red;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+            padding-top: 65px;
+            z-index: 9;
+        }
+        #aboutmiHoYo{
+            position: absolute;
+            background-color: blue;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0;
+            box-sizing: border-box;
+            padding-top: 65px;
+            z-index: 8;
+        }
+        #joinmiHoYo{
+            position: absolute;
+            background-color: green;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0;
+            box-sizing: border-box;
+            padding-top: 65px;
+            z-index: 7;
+        }
+        #news{
+            position: absolute;
+            background-color: yellow;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0;
+            box-sizing: border-box;
+            padding-top: 65px;
+            z-index: 6;
+        }
+    }
+}
+
+.changeColor01{
+    width: 0;
+    height: 0;
+    /* 实现一个等边三角形 */
+    box-sizing: border-box;
+    border-left: 7.5px solid transparent;
+    border-right: 7.5px solid transparent;
+    border-bottom: 11.99px solid #4EA1D9; 
+    rotate: 90deg;
+    position: relative;
+    left: 173px;
+    top: 5px;
+    transition: border-color 0.5s ease;
+}
+.changeVideo01{
+    opacity: 1;
+    visibility: visible;
+}
+
+.showVideoCutRotate01{
+    animation: showVideoCutRotate01 0.5s forwards;
+}
+.showVideoCutRotate02{
+    animation: showVideoCutRotate02 0.5s forwards;
+}
+
+.show{
+    transform: translateY(0);
+    opacity: 1;
+}
+.visiable{
+    
+    visibility: visible;
+}
+.transformChange01{
+    animation: transformChange01 1.2s forwards;
+}
+@keyframes transformChange01{
+    from{
+        transform: translateY(-150px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+@keyframes arrowheadMoved{
+    from{
+        top: -8px;
+    }to{
+        top: 25px;
+    }
+}
+
+@keyframes showVideoCutRotate01 {
+    from{
+        rotate: 0deg;
+    }
+    to{
+        rotate: 90deg;
+    }
+}
+@keyframes showVideoCutRotate02 {
+    from{
+        rotate: 90deg;
+    }
+    to{
+        rotate: 0deg;
+    }
+}
+
