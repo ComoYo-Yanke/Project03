@@ -684,14 +684,13 @@ body{
                 cursor: pointer;
                 .KnowWeAbout{
                     position: absolute;
-                    bottom: 0;
+                    top: 0;
                     left: 0;
                     box-sizing: border-box;   
                     display: inline-block;
                     margin: 0;
                     height: 40px;
                     .blueAbout{
-                        position: relative;
                         box-sizing: border-box;
                         background-color: #3778E5;
                         color: #fff;
@@ -699,7 +698,6 @@ body{
                         height: 50%;
                     }
                     .writeAbout{
-                        position: relative;
                         color: #676B74;
                         box-sizing: border-box;
                         background-color: transparent;
@@ -713,14 +711,13 @@ body{
                 }
                 .KnowWeDevlopment{
                     position: absolute;
-                    bottom: 0;
+                    top: 0;
                     right: 22px;
                     box-sizing: border-box;
                     display: inline-block;
                     margin: 0;
                     height: 40px;
                     .writeDevlopment{
-                        position: relative;
                         color: #676B74;
                         box-sizing: border-box;
                         background-color: transparent;
@@ -732,7 +729,6 @@ body{
                         height: 50%;
                     }
                     .blueDevlopment{
-                        position: relative;
                         box-sizing: border-box;
                         background-color: #3778E5;
                         color: #fff;
@@ -748,7 +744,7 @@ body{
                 width: 800px;
                 height: 590px;
                 box-sizing: border-box;
-                /* border: 1px solid black;     */
+                border: 1px solid black;    
                 left: 24%;
                 top: 24.5%;
                 .aboutmiHoYoConten{
@@ -764,7 +760,7 @@ body{
                         font-weight: 550;
                         line-height: 5px;
                         position: absolute;
-                        right: 85%;
+                        right: 88%;
                         letter-spacing: 0.7px;
                         
                     }
@@ -777,108 +773,36 @@ body{
                     }
                     /* 特定样式 */
                     .above{
-                        box-sizing: border-box;
-                        margin-bottom: 80px;
                         .titles{
                             
                         }
                         .text{
-                            position: relative;
-                            left: 55px;
-                            top: 30px;
-                            
-                            p{
-                                /* 字体颜色逐渐变动的动画 */
-                                background-image: linear-gradient(-135deg, #418ae0, #56a0d8, #dc8bc3, #56a0d8, #418ae0, #56a0d8, #dc8bc3, #56a0d8, #418ae0);
-                                animation: textColorChange 3s infinite linear;
-                                background-size: 200% 100%;
+                            p, div{
+                                background-image: linear-gradient(-135deg, #3778e5, #e98bc0, #3778e5, #e98bc0, #3778e5);
                                 -webkit-background-clip: text;
                                 color: transparent;
-                                position: relative;
-                                font-size: 38px;
-                                letter-spacing: 3px;
-                                font-weight: 300;
-                                margin: 0;
-                                line-height: 50px;
-                                box-sizing: border-box;
                             }
-                            div{
-                                border-color: linear-gradient(-135deg, #3778e5, #e98bc0, #3778e5, #e98bc0, #3778e5);
-                                height: 21px;
-                                width: 5px;
-                                box-sizing: border-box;
-                            }
-                            .left{
-                                position: relative;
-                                margin-bottom: 10px;
-                                letter-spacing: 5px;
-                                left: 5px;
-                            }
-                            .right{
-                                position: relative;
-                                left: 135px;
-                                letter-spacing: 5px;
-                            }
-                            .borderLeft{
-                                position: relative;
-                                top: -25px;
-                                height: 21px;
-                                width: 6px;
-                                border-top: 3px solid #4EA1D9;
-                                border-bottom: 0.1px solid #d2d9e386;
-                                border-left: 3px solid #4EA1D9;
-                                border-right: 0.1px solid #d2d9e386;
-                            }
-                            .borderRight{
-                                position: relative;
-                                left: 120px;
-                                top: 12px;
-                                height: 19px;
-                                width: 7px;
-                                border-top: 0.1px solid #efcbdf92;
-                                border-bottom: 3px solid #D79DE4;
-                                border-left: 0.1px solid #efcbdf92;
-                                border-right: 3px solid #D79DE4;
-                            }
+                                
                         }
                     }
                     .middle{
                         b{
                             position: absolute;
-                            right: 82%;
-                            top: 41%;
+                            right: 87%;
                         }
                         .titles{
-                            position: relative;
-                            top: -5px;
+
                         }
                         .text{
-                            letter-spacing: 1px;
-                            position: relative;
-                            top: 10px;
-                            font-size: 12px;
-                            width: 800px;
-                            line-height: 27px;
-                            text-wrap: wrap;
-                            color: #272933da;
-                            p{
-                                margin-bottom: 30px;
-                            }
+
                         }
                     }
                     .under{
-                        position: absolute;
-                        bottom: 0;
                         .titles{
-                            font-size: 12px;
-                            box-sizing: border-box;
-                            margin-bottom: 20px;
+
                         }
                         .text{
-                            font-size: 11px;
-                            letter-spacing: 0.8px;
-                            box-sizing: border-box;
-                            margin-bottom: 5px;
+
                         }
                     }
                 }
@@ -1235,48 +1159,5 @@ body{
     }
     100%{
         transform: translateY(0);
-    }
-}
-
-@keyframes textColorChange{
-    0%{
-        background-position: 0 -100%;
-    }
-    100%{
-        background-position: -100% 0;
-    }
-}
-
-.KnowWeBh01{
-    animation: KnowWeBh01 0.7s forwards;
-}
-
-.KnowWeBh02{
-    animation: KnowWeBh02 0.7s forwards;
-}
-
-@keyframes KnowWeBh01{
-    from{
-        transform:translateY(200px);
-    }
-    to{
-        transform:translateY(0);
-    }
-}
-
-@keyframes KnowWeBh02{
-    from{
-        transform: translateY(-300px);
-    }
-    to{
-        transform: translateY(0);
-    }
-}
-
-@keyframes KnowWeBottonBh01{
-    from{
-        transform: translateY(0px);
-    }to{
-        transform: translateY(20px);
     }
 }

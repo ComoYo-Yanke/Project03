@@ -9,19 +9,81 @@
     <script src="control/index.js"></script>
     <script>
         window.addEventListener('load', () => {
-            // let content = document.querySelector(".content");
-            // content.style.height = window.innerHeight + "px";
-            // let pages = document.querySelectorAll('pages');
-            // pages.forEach(s => {
-            //     s.style.height = window.innerHeight + 'px';
-            //     s.style.window = window.innerWidth + 'px';
-            // });
-            // console.log(window.innerHeight);
-            
+            let GameName = document.querySelectorAll(".GameName");
+            let ENName = document.querySelectorAll(".ENName");
+            let SkipLine = document.querySelectorAll(".SkipLine");
+            let Introduction = document.querySelectorAll(".Introduction");
+            let SkipTags = document.querySelectorAll(".SkipTags");
+
+            GameName.forEach(s => {
+                s.style.opacity = 0;
+            });
+            ENName.forEach(s => {
+                s.style.opacity = 0;
+            });
+            SkipLine.forEach(s => {
+                s.style.opacity = 0;
+            });
+            Introduction.forEach(s => {
+                s.style.opacity = 0;
+            });
+            SkipTags.forEach(s => {
+                s.style.opacity = 0;
+                s.style.cursor = 'pointer';
+            });
+            let WXImg = document.querySelectorAll(".WXImg");
+            let Official = document.querySelectorAll(".Officail");
+            let WB = document.querySelectorAll(".WB");
+            let WX = document.querySelectorAll(".WX");
+            let Bilibli = this.document.querySelectorAll(".Bilibili");
+            Official.forEach(s =>  {
+                s.addEventListener('mouseover', () => {
+                    s.style.color = '#3778E5';
+                });
+                s.addEventListener('mouseleave', () => {
+                    s.style.color = 'black';
+                });
+            });
+            WB.forEach(s =>  {
+                s.addEventListener('mouseover', () => {
+                    s.style.color = '#3778E5';
+                });
+                s.addEventListener('mouseleave', () => {
+                    s.style.color = 'black';
+                });
+            });
+            for(let i = 0; i < WX.length; i++){
+                WX[i].addEventListener('mouseover', () => {
+                    WX[i].style.color = '#3778E5';
+                    WXImg[i].classList.remove('hiddens02');
+                    WXImg[i].classList.add('obvious02');
+                });
+                WX[i].addEventListener('mouseleave', () => {
+                    WX[i].style.color = 'black';
+                    WXImg[i].classList.add('hiddens02');
+                    WXImg[i].classList.remove('obvious02');
+                });
+            }
+            Bilibli.forEach(s =>  {
+                s.addEventListener('mouseover', () => {
+                    s.style.color = '#3778E5';
+                });
+                s.addEventListener('mouseleave', () => {
+                    s.style.color = 'black';
+                });
+            });
+            // for(let i = 0; i < SkipTags.length; i++){
+            //     SkipTags[i].addEventListener('mouseover', () => {
+            //         s.style.color = '#3778E5';
+            //     });
+            // }
+            window.dispatchEvent(
+                new WheelEvent('wheel', {
+                    deltaX: 0,
+                    deltaY: -10,
+                    deltaMode: WheelEvent.DOM_DELTA_PIXEL
+            }));
         });
-        
-        
-        
     </script>
 </head>
 <body>
@@ -34,16 +96,24 @@
         <div class="headTags" id="skipToWe">了解我们</div>
         <div class="headTags" id="skipToJoinWe">加入我们</div>
         <div class="headTags" id="skipToNews">新闻动态</div>
-        <div class="headTags" id="changeChAndEn">
+        <div class="headTagsOther" id="changeChAndEn">
             <div class="borderskip"></div>
-            <div class="CH">CH</div>
+            <div class="CH"><a style="color: #676B73;">CH</a></div>
             <div class="omition"></div>
-            <div class="EN">EN</div>
+            <div class="EN"><a href="indexEn.html" style="color: #E9E9E9;">EN</a></div>
         </div>
 
 
     </div>
     <div class="content">
+        <div class="pointOutAll">
+                    <img class="mouse" src="../resources/imgs/iron01.svg" alt="">
+                    <div class="arrowhead">
+                        <img  src="../resources/imgs/arrowhead02.svg" alt="">
+                    </div>
+                    <div class="arrowheadBoxLine"></div>
+                    
+            </div>
         <div class="pages" id="introduction">
             <div class="showVideo">
                 <video class="showVideosTV" src="../resources/videos/videoOfPassageMain01.mp4"
@@ -74,133 +144,335 @@
                 </div>
             </div>
         </div>
+        <div class="videoCanOfGame">
+            <video class="videoOfGame" src="../resources/videos/videoOfGamebh3.mp4" controls></video>
+            <div class="showVideoCut02" style="
+                position: absolute;">
+                <img src="../resources/imgs/cut.png" alt="">
+            </div>
+        </div>
         <div class="pages" id="aboutOfGame">
-            <div class="lunbo"></div>
-            <div class="wirte01"></div>
-            <div class="VideoCan"></div>
-            <div class="VideoCanWirte"></div>
-            <div class="styleBox01"></div>
-            <div class="" id="bh2gameShow">
+            <div class="lunbo">
+                <div class="lunboimg" id="bh2">
+                    <img src="../resources/imgs/lunbuBh2.png" alt="">
+                </div>
+                <div class="lunboimg" id="bh3">
+                    <img src="../resources/imgs/lunboBh3.png" alt="">
+                </div>
+                <div class="lunboimg" id="Wd">
+                    <img src="../resources/imgs/lunboWd.png" alt="">
+                </div>
+                <div class="lunboimg" id="YS">
+                    <img src="../resources/imgs/lunboYS.png" alt="">
+                </div>
+                <div class="lunboimg" id="SR">
+                    <img src="../resources/imgs/lunboSr.png" alt="">
+                </div>
+                <div class="lunboimg" id="ZZZ">
+                    <img src="../resources/imgs/lunboZZZ.png" alt="">
+                </div>
+            </div>
+            <div class="write01">
+                <img src="../resources/imgs/aboutGameMask.png" alt="" style="display: none;">
+                <img src="../resources/imgs/aboutGameWrite01.png" alt="">
+            </div>
+            <div class="VideoCan">
+                <img src="../resources/imgs/aboutGameVideoRun.png" alt="">
+                <div class="runBotton"></div>
+            </div>
+            <div class="VideoCanWirte">INTRO VIDEO</div>
+            <div class="styleBox01">
+                <img class="aboutGameBackgroud" src="../resources/imgs/bh2gameShowBG.png" alt="">
+                <div class="aboutGameBackMask"></div>
+                <img class="aboutGameBackStyle" src="../resources/imgs/aboutGameBack.png" alt="">
+            </div>
+            <div class="blueCube"></div>
+            
+            <div class="aboutGameShow" id="bh2gameShow">
                 <div class="left">
-                    <div class="bh2gameShowBody"></div>
-                    <div class="bh2gameShowBG"></div>
-                    
+                    <div class="gameShowBody" id="bh2gameShowBody">
+                        <img src="../resources/imgs/bh2gameShow.png" alt="">
+                    </div>
                 </div>
                 <div class="right">
-                    <div class="bh2GameName">崩坏学院2</div>
-                    <div class="bh2ENName">Houkai Gakuen 2</div>
-                    <div class="bh2SkipLine"></div>
-                    <div class="bh2Introdction">
-                        <p>米哈游崩坏系列经典Q版射击游戏</p>
-                        <p>末日都市之旅，指尖爽快战斗，开启与少女们的末世物语</p>
+                    <div class="GameName" id="bh2GameName">
+                        <img src="../resources/imgs/bh2Text.png" alt="">
                     </div>
-                    <div class="bh2SkipTags">
-                        <div class="bh2Official">游戏官网</div>
-                        <div class="bh2WB">微博</div>
-                        <div class="bh2WX">微信公众号</div>
-                        <div class="bh2Bilibili">Bilibili</div>
+                    <div class="ENName" id="bh2ENName">Houkai Gakuen 2</div>
+                    <div class="SkipLine" id="bh2SkipLine"></div>
+                    <div class="Introduction" id="bh2Introduction">
+                        <p>米哈游崩坏系列经典Q版射击游戏。</p>
+                        <p>末日都市之旅，指尖爽快战斗，开启与少女们的末世物语。</p>
+                    </div>
+                    <div class="SkipTags" id="bh2SkipTags">
+                        <div class="Officail" id="bh2Official">游戏官网</div>
+                        <div class="WB" id="bh2WB">微博</div>
+                        <div class="WX" id="bh2WX">微信公众号</div>
+                        <div class="WXImg" id="'bh2WXimg">
+                            <div class="traAngle"></div>
+                            <img class="WXJoinCan" src="../resources/imgs/WXJoinCan.png" alt="">
+                        </div>
+                        <div class="Bilibili" id="bh2Bilibili">Bilibili</div>
                     </div>
 
                 </div>
             </div>
-            <div id="bh3gameShow">
+            <div class="aboutGameShow" id="bh3gameShow">
                 <div class="left">
-                    <div class="bh3gameShowBody"></div>
-                    <div class="bh3gameShowBG"></div>
+                    <div class="gameShowBody" id="bh3gameShowBody">
+                        <img src="../resources/imgs/bh3gameShow.png" alt="">
+                    </div>
                 </div>
                 <div class="right">
-                    <div class="bh3GameName"></div>
-                    <div class="bh3ENName"></div>
-                    <div class="bh3SkipLine"></div>
-                    <div class="bh3Introdction"></div>
-                    <div class="bh3SkipTags">
-                        <div class="bh3Official"></div>
-                        <div class="bh3WB"></div>
-                        <div class="bh3WX"></div>
-                        <div class="bh3Bilibili"></div>
+                    <div class="GameName" id="bh3GameName">
+                        <img src="../resources/imgs/bh3Text.png" alt="">
+                    </div>
+                    <div class="ENName" id="bh3ENName">Honkai Impact 3rd</div>
+                    <div class="SkipLine" id="bh3SkipLine"></div>
+                    <div class="Introduction" id="bh3Introduction">
+                        <p>米哈游崩坏系列3D全视角卡通渲染、次世代动作游戏。</p>
+                        <p>在被崩坏侵蚀的世界中，勇敢的少女组成的女武神部队，为守护世界而展开了战斗。</p>
+                    </div>
+                    <div class="SkipTags" id="bh3SkipTags">
+                        <div class="Officail" id="bh3Official">游戏官网</div>
+                        <div class="WB" id="bh3WB">微博</div>
+                        <div class="WX" id="bh3WX">微信公众号</div>
+                        <div class="WXImg" id="bh3WXimg">
+                            <div class="traAngle"></div>
+                            <img class="WXJoinCan" src="../resources/imgs/WXJoinCan.png" alt="">
+                        </div>
+                        <div class="Bilibili" id="bh3Bilibili">Bilibili</div>
                     </div>
                 </div>
             </div>
-            <div id="WDgameShow">
+            <div class="aboutGameShow" id="WDgameShow">
                 <div class="left">
-                    <div class="WDgameShowBody"></div>
-                    <div class="WDgameShowBG"></div>
+                    <div class="gameShowBody" id="WDgameShowBody">
+                        <img src="../resources/imgs/WDgameShow.png" alt="">
+                    </div>
                 </div>
                 <div class="right">
-                    <div class="WDGameName"></div>
-                    <div class="WDENName"></div>
-                    <div class="WDSkipLine"></div>
-                    <div class="WDIntrodction"></div>
-                    <div class="WDSkipTags">
-                        <div class="WDOfficial"></div>
-                        <div class="WDWB"></div>
-                        <div class="WDWX"></div>
-                        <div class="WDBilibili"></div>
+                    <div class="GameName" id="WDGameName">
+                        <img src="../resources/imgs/WDText.png" alt="">
+                    </div>
+                    <div class="ENName" id="WDENName">Tears of Themis</div>
+                    <div class="SkipLine" id="WDSkipLine"></div>
+                    <div class="Introduction" id="WDIntroduction">
+                        <p>米哈游律政恋爱推理游戏。</p>
+                        <p>你将扮演新人律师，在与他携手解决离奇委托的过程中，被卷入不为人知的阴谋。</p>
+                        <p>这是一场恋爱x推理的冒险，你将作出怎样的抉择？</p>
+                    </div>
+                    <div class="SkipTags" id="WDSkipTags">
+                        <div class="Officail" id="WDOfficial">游戏官网</div>
+                        <div class="WB" id="WDWB">微博</div>
+                        <div class="WX" id="WDWX">微信公众号</div>
+                        <div class="WXImg" id="WDWXimg">
+                            <div class="traAngle"></div>
+                            <img class="WXJoinCan" src="../resources/imgs/WXJoinCan.png" alt="">
+                        </div>
+                        <div class="Bilibili" id="WDBilibili">Bilibili</div>
                     </div>
                 </div>
             </div>
-            <div id="YSgameShow">
+            <div class="aboutGameShow" id="YSgameShow">
                 <div class="left">
-                    <div class="YSgameShowBody"></div>
-                    <div class="YSgameShowBG"></div>
+                    <div class="gameShowBody" id="YSgameShowBody">
+                        <img src="../resources/imgs/YSgameShow.png" alt="">
+                    </div>
                 </div>
                 <div class="right">
-                    <div class="YSGameName"></div>
-                    <div class="YSENName"></div>
-                    <div class="YSSkipLine"></div>
-                    <div class="YSIntrodction"></div>
-                    <div class="YSSkipTags">
-                        <div class="YSOfficial"></div>
-                        <div class="YSWB"></div>
-                        <div class="YSWX"></div>
-                        <div class="YSBilibili"></div>
+                    <div class="GameName" id="YSGameName">
+                        <img src="../resources/imgs/YSText.png" alt="">
+                    </div>
+                    <div class="ENName" id="YSENName">Genshin Impact</div>
+                    <div class="SkipLine" id="YSSkipLine"></div>
+                    <div class="Introduction" id="YSIntroduction">
+                        <p>米哈游全新开放世界角色冒险游戏。</p>
+                        <p>你将在游戏中探索一个被称作「提瓦特」的幻想世界。</p>
+                    </div>
+                    <div class="SkipTags" id="YSSkipTags">
+                        <div class="Officail" id="YSOfficial">游戏官网</div>
+                        <div class="WB" id="YSWB">微博</div>
+                        <div class="WX" id="YSWX">微信公众号</div>
+                        <div class="WXImg" id="YSWXimg">
+                            <div class="traAngle"></div>
+                            <img class="WXJoinCan" src="../resources/imgs/WXJoinCan.png" alt="">
+                        </div>
+                        <div class="Bilibili" id="YSBilibili">Bilibili</div>
                     </div>
                 </div>
             </div>
-            <div id="SRgameShow">
+            <div class="aboutGameShow" id="SRgameShow">
                 <div class="left">
-                    <div class="SRgameShowBody"></div>
-                    <div class="SRgameShowBG"></div>
+                    <div class="gameShowBody" id="SRgameShowBody">
+                        <img src="../resources/imgs/SRgameShow.png" alt="">
+                    </div>
                 </div>
                 <div class="right">
-                    <div class="SRGameName"></div>
-                    <div class="SRENName"></div>
-                    <div class="SRSkipLine"></div>
-                    <div class="SRIntrodction"></div>
-                    <div class="SRSkipTags">
-                        <div class="SROfficial"></div>
-                        <div class="SRWB"></div>
-                        <div class="SRWX"></div>
-                        <div class="SRBilibili"></div>
+                    <div class="GameName" id="SRGameName">
+                        <img src="../resources/imgs/SRText.png" alt="">
+                    </div>
+                    <div class="ENName" id="SRENName">Honkai: Star Rail</div>
+                    <div class="SkipLine" id="SRSkipLine"></div>
+                    <div class="Introduction" id="SRIntroduction">
+                        <p>米哈游全新银河冒险策略游戏。</p>
+                        <p>你将由此探索新的文明，结识新的伙伴，</p>
+                        <p>在无数光怪陆离的「世界」与「世界」之间展开新的冒险。</p>
+                        <p>所有你想知道的，都将在群星中找到答案。</p>
+                    </div>
+                    <div class="SkipTags" id="SRSkipTags">
+                        <div class="Officail" id="SROfficial">游戏官网</div>
+                        <div class="WB" id="SRWB">微博</div>
+                        <div class="WX" id="SRWX">微信公众号</div>
+                        <div class="WXImg" id="'SRWXimg">
+                            <div class="traAngle"></div>
+                            <img class="WXJoinCan" src="../resources/imgs/WXJoinCan.png" alt="">
+                        </div>
+                        <div class="Bilibili" id="SRBilibili">Bilibili</div>
                     </div>
                 </div>
             </div>
-            <div id="ZZZgameShow">
+            <div class="aboutGameShow" id="ZZZgameShow">
                 <div class="left">
-                    <div class="ZZZgameShowBody"></div>
-                    <div class="ZZZgameShowBG"></div>
+                    <div class="gameShowBody" id="ZZZgameShowBody">
+                        <img src="../resources/imgs/ZZZgameShow.png" alt="">
+                    </div>
                 </div>
                 <div class="right">
-                    <div class="ZZZGameName"></div>
-                    <div class="ZZZENName"></div>
-                    <div class="ZZZSkipLine"></div>
-                    <div class="ZZZIntrodction"></div>
-                    <div class="ZZZSkipTags">
-                        <div class="ZZZOfficial"></div>
-                        <div class="ZZZWB"></div>
-                        <div class="ZZZWX"></div>
-                        <div class="ZZZBilibili"></div>
+                    <div class="GameName" id="ZZZGameName">
+                        <img src="../resources/imgs/ZZZText.png" alt="">
+                    </div>
+                    <div class="ENName" id="ZZZENName">Zenless Zone Zero</div>
+                    <div class="SkipLine" id="ZZZSkipLine"></div>
+                    <div class="Introduction" id="ZZZIntroduction">
+                        <p>米哈游自研的全新动作游戏。</p>
+                        <p>在这个空洞灾祸频仍的世界里，崛起了一座另类城市————「新艾利都」。</p>
+                        <p>而你将成为串联起空洞与都市的关键少数派，名为「绳匠」的特殊职业人士。</p>
+                        <p>这里正等待着见证你的故事。</p>
+                    </div>
+                    <div class="SkipTags" id="ZZZSkipTags">
+                        <div class="Officail" id="ZZZOfficial">游戏官网</div>
+                        <div class="WB" id="ZZZWB">微博</div>
+                        <div class="WX" id="ZZZWX">微信公众号</div>
+                        <div class="WXImg" id="ZZZWXimg">
+                            <div class="traAngle"></div>
+                            <img class="WXJoinCan" src="../resources/imgs/WXJoinCan.png" alt="">
+                        </div>
+                        <div class="Bilibili" id="ZZZBilibili">Bilibili</div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="pages" id="aboutmiHoYo">关于
-            <div  id="developmentHistory"></div>
+        <div class="pages" id="KnowWe">
+            <div class="KnowWeChangeBotton">
+                <div class="KnowWeAbout">
+                    <div class="KnowWeAboutBotton" style="
+                        height: 20px; position: absolute; width: 100%; left: 0; bottom: 0; z-index: 10;"></div>
+                    <div class="writeAbout">关于米哈游</div>
+                    <div class="blueAbout">关于米哈游</div>
+                </div>
+                <div class="KnowWeDevlopment">
+                    <div class="KnowWeDevlopmentBotton" style="
+                        height: 20px; width: 100%; position: absolute; right: 0; bottom: 0; z-index: 10;"></div>
+                    <div class="blueDevlopment">发展历程</div>
+                    <div class="writeDevlopment">发展历程</div>
+                </div>
+
+                
+            </div>
+            <div class="KnowWeContent">
+                    <div class="aboutmiHoYoConten">
+                        <div class="above">
+                            <div class="titles">我们的愿景</div>
+                            <b>OUR VISION</b>
+                            <div class="text">
+                                
+                                <p>
+                                    <div class="borderLeft" style="display: inline-block;"></div>
+                                    <p class="left" style="display: inline-block;">2030年，打造出全球十亿人</p>
+                                </p>
+                                <p class="right" style="display: inline-block;">
+                                    愿意生活在其中的虚拟世界。
+                                    <div class="borderRight" style="display: inline-block;"></div>
+                                </p>
+                                
+                            </div>
+                        </div>
+                        <div class="middle">
+                            <div class="titles">关于米哈游</div>
+                            <b>ABOUT MIHOYO</b>
+                            <div class="text">
+                                <p>米哈游成立于2011年，致力于为用户提供美好的、超出预期的产品与内容。米哈游陆续推出了多款高品质人气产品，包括《崩坏学院2》、<br>
+                                    《崩坏3》、《未定事件薄》、《原神》、《崩坏：星穹铁道》、《绝区零》，并围绕原创IP打造了动画、音乐及周边等多元产品。
+                                </p>
+                                <p>秉持着“<span style="color: #3778E5; font-weight: 600;">技术宅拯救世界</span>”的使命，米哈游始终致力于技术研发、探索前沿科技，在卡通渲染、
+                                    人工智能、云游戏技术等领域积累了先进的<br>技术能力</p>
+                                <p>米哈游总部位于中国上海，并在新加坡、美国、加拿大、日本、韩国等国家和地区进行全球化布局。目前公司员工5000人，来自世界知<br>
+                                名游戏/互联网/科技公司</p>
+                            </div>
+                        </div>
+                        <div class="under">
+                            <div class="titles"><span style="color: #3778E5;">米哈游的研发理念</span></div>
+                            <div class="text">Something New | Something Excting | Something Out of Imagination</div>
+                        </div>
+                    </div>
+                    <div class="developmentConten"></div>
+                </div>
+            <div class="write02">
+                <img src="../resources/imgs/aboutGameMask.png" alt="" style="
+                    height: 384px;
+                    top: 110px;
+                    ">
+                <img class="write02Text" src="../resources/imgs/aboutGameWrite01.png" alt="">
+            </div>
+            <div class="backMask" id="KnowWeBackMask" style="
+                    position: absolute;
+                    height: 308px;
+                    right: 0;
+                    top: 65px;
+                    opacity: 0;
+                    visibility: hidden;">
+                <img src="../resources/imgs/aboutmiHoYoMask.png" alt="" style="height: 100%;">
+            </div>
         </div>
         
-        <div class="pages" id="joinmiHoYo"></div>
-        <div class="pages" id="news"></div>
+        <div class="pages" id="joinmiHoYo">
+            <div class="write03">
+                <img src="../resources/imgs/aboutGameMask.png" alt="" style="
+                    height: 384px;
+                    top: 110px;
+                    ">
+                <img class="write02Text" src="../resources/imgs/aboutGameWrite01.png" alt="">
+            </div>
+            <div class="backMask" id="joinmiHoYoBackMask" style="
+                    position: absolute;
+                    height: 308px;
+                    right: 0;
+                    top: 65px;
+                    opacity: 0;
+                    visibility: hidden;">
+                <img src="../resources/imgs/joinmiHoYoMask.png" alt="" style="height: 100%;">
+            </div>
+        </div>
+        <div class="pages" id="news">
+            <div class="write04">
+                <img src="../resources/imgs/aboutGameMask.png" alt="" style="
+                    height: 384px;
+                    top: 110px;
+                    ">
+                <img class="write02Text" src="../resources/imgs/aboutGameWrite01.png" alt="">
+            </div>
+            <div class="backMask" id="newsBackMask" style="
+                    position: absolute;
+                    height: 308px;
+                    right: 0;
+                    top: 65px;
+                    opacity: 0;
+                    visibility: hidden;">
+                <img src="../resources/imgs/newsMask.png" alt="" style="height: 100%;">
+            </div>
+        </div>
     </div>
     <div class="footer"></div>
 </body>
