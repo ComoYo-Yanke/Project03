@@ -85,22 +85,34 @@
             }));
         });
     </script>
+    <style>
+        .headTags{
+            top: -30px;
+            left: 10px;
+        }
+
+        .headTagsOther{
+            position: absolute;
+            top: -50px;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
     <div class="header">
         <div class="headerLogo">
             <img src="../resources/imgs/mihoyo-logo.fc3399a.png" alt="">
         </div>
-        <div class="headTags" id="skipToMain">首页</div>
-        <div class="headTags" id="skipToinformation">产品信息</div>
-        <div class="headTags" id="skipToWe">了解我们</div>
-        <div class="headTags" id="skipToJoinWe">加入我们</div>
-        <div class="headTags" id="skipToNews">新闻动态</div>
+        <div class="headTags" id="skipToMain">Home</div>
+        <div class="headTags" id="skipToinformation">Our Products</div>
+        <div class="headTags" id="skipToWe">About Us</div>
+        <div class="headTags" id="skipToJoinWe">Careers</div>
+        <div class="headTags" id="skipToNews"></div>
         <div class="headTagsOther" id="changeChAndEn">
             <div class="borderskip"></div>
-            <div class="CH">CH</div>
+            <div class="CH"><a href="index.html" style="color: #E9E9E9;">CH</a></div>
             <div class="omition"></div>
-            <div class="EN"><a href="indexEn.html" style="color: #E9E9E9;">EN</a></div>
+            <div class="EN"><a  style="color: #676767;">EN</a></div>
         </div>
 
 
@@ -367,16 +379,18 @@
         <div class="pages" id="KnowWe">
             <div class="KnowWeChangeBotton">
                 <div class="KnowWeAbout">
-                    <div class="blueAbout">关于米哈游</div>
+                    <div class="KnowWeAboutBotton" style="
+                        height: 20px; position: absolute; width: 100%; left: 0; bottom: 0; z-index: 10;"></div>
                     <div class="writeAbout">关于米哈游</div>
+                    <div class="blueAbout">关于米哈游</div>
                 </div>
                 <div class="KnowWeDevlopment">
-                    <div class="writeDevlopment">发展历程</div>
+                    <div class="KnowWeDevlopmentBotton" style="
+                        height: 20px; width: 100%; position: absolute; right: 0; bottom: 0; z-index: 10;"></div>
                     <div class="blueDevlopment">发展历程</div>
-                    
+                    <div class="writeDevlopment">发展历程</div>
                 </div>
 
-                
                 
             </div>
             <div class="KnowWeContent">
@@ -387,12 +401,12 @@
                             <div class="text">
                                 
                                 <p>
-                                    <div class="borderLeft" style="display: inline-block;">「</div>
-                                    <p style="display: inline-block;">2030年，打造出全球十亿人</p>
+                                    <div class="borderLeft" style="display: inline-block;"></div>
+                                    <p class="left" style="display: inline-block;">2030年，打造出全球十亿人</p>
                                 </p>
-                                <p style="display: inline-block;">
+                                <p class="right" style="display: inline-block;">
                                     愿意生活在其中的虚拟世界。
-                                    <div class="borderRight" style="display: inline-block;">」</div>
+                                    <div class="borderRight" style="display: inline-block;"></div>
                                 </p>
                                 
                             </div>
@@ -404,7 +418,7 @@
                                 <p>米哈游成立于2011年，致力于为用户提供美好的、超出预期的产品与内容。米哈游陆续推出了多款高品质人气产品，包括《崩坏学院2》、<br>
                                     《崩坏3》、《未定事件薄》、《原神》、《崩坏：星穹铁道》、《绝区零》，并围绕原创IP打造了动画、音乐及周边等多元产品。
                                 </p>
-                                <p>秉持着“<span style="color: #3778E5;">技术宅拯救世界</span>”的使命，米哈游始终致力于技术研发、探索前沿科技，在卡通渲染、
+                                <p>秉持着“<span style="color: #3778E5; font-weight: 600;">技术宅拯救世界</span>”的使命，米哈游始终致力于技术研发、探索前沿科技，在卡通渲染、
                                     人工智能、云游戏技术等领域积累了先进的<br>技术能力</p>
                                 <p>米哈游总部位于中国上海，并在新加坡、美国、加拿大、日本、韩国等国家和地区进行全球化布局。目前公司员工5000人，来自世界知<br>
                                 名游戏/互联网/科技公司</p>
@@ -415,7 +429,208 @@
                             <div class="text">Something New | Something Excting | Something Out of Imagination</div>
                         </div>
                     </div>
-                    <div class="developmentConten"></div>
+                    <div class="developmentConten">
+                        <div class="titles">发展历程
+                            <b>MILESTONES</b>
+                        </div>
+                        
+                        <div class="developmentImgs">
+                            <img class="developmentImg" src="../resources/imgs/mihoyo-historyShow01.png" alt="">
+                        </div>
+                        <div class="developmentIntroductions">米哈游创始团队推出独立游戏《FlyMe2theMoon》</div>
+                        <div class="before01">
+                            <img src="../resources/imgs/historyArrow01.png" alt="">
+                        </div>
+                        <div class="after01">
+                            <img src="../resources/imgs/historyArrow01.png" alt="">
+                        </div>
+                        
+                        <div class="line"></div>
+                        <div class="arrow01"><div class="arrowLeft">
+                            <p>&lt;</p>
+                        </div></div>
+                        
+                        <div class="timeLineCan">
+                            <ul class="timeLine">
+                                <!-- 1 -->
+                                <li class="timeLine-item" id="FirstTimeLine-item">
+                                    <div class="timeLine-item_year">
+                                        <span>2011</span>
+                                    </div>
+                                    <div class="timeLine-item_event">
+                                        <div class="timeLine-item_icon">
+                                            <div class="iconBorder">
+                                                <img src="../resources/imgs/afterArrow01.png" alt="">
+                                                <img src="../resources/imgs/afterArrow01.png" alt="">
+                                            </div>
+                                            <img src="../resources/imgs/mihoyo-historyIcon01.png" alt="">
+                                        </div>
+                                        <b>2011.10</b>
+                                    </div>
+                                </li>
+                                <!-- 2 -->
+                                <li class="timeLine-item" id="FirstTimeLine-item">
+                                    <div class="timeLine-item_year">
+                                        <span>2012</span>
+                                    </div>
+                                    <div class="timeLine-item_event">
+                                        <div class="timeLine-item_icon">
+                                            <div class="iconBorder">
+                                                <img src="../resources/imgs/afterArrow01.png" alt="">
+                                                <img src="../resources/imgs/afterArrow01.png" alt="">
+                                            </div>
+                                            <img src="../resources/imgs/mihoyo-history02.png" alt="">
+                                        </div>
+                                        <b>2012.12</b>
+                                    </div>
+                                </li>
+                                <!-- 3 -->
+                                <li class="timeLine-item" id="FirstTimeLine-item">
+                                    <div class="timeLine-item_year">
+                                        <span>2014</span>
+                                    </div>
+                                    <div class="timeLine-item_event">
+                                        <div class="timeLine-item_icon">
+                                            <div class="iconBorder">
+                                                <img src="../resources/imgs/afterArrow01.png" alt="">
+                                                <img src="../resources/imgs/afterArrow01.png" alt="">
+                                            </div>
+                                            <img src="../resources/imgs/mihoyo-history03.png" alt="">
+                                        </div>
+                                        <b>2014.03</b>
+                                    </div>
+                                </li>
+                                <!-- 4 -->
+                                <li class="timeLine-item" id="FirstTimeLine-item">
+                                    <div class="timeLine-item_year">
+                                        <span>2016</span>
+                                    </div>
+                                    <div class="timeLine-item_event">
+                                        <div class="timeLine-item_icon">
+                                            <div class="iconBorder">
+                                                <img src="../resources/imgs/afterArrow01.png" alt="">
+                                                <img src="../resources/imgs/afterArrow01.png" alt="">
+                                            </div>
+                                            <img src="../resources/imgs/mihoyo-history04.png" alt="">
+                                        </div>
+                                        <b>2016.09</b>
+                                    </div>
+                                </li>
+                                <!-- 5 -->
+                                <li class="timeLine-item" id="FirstTimeLine-item"
+                                    style="margin-right: 4px;">
+                                    <div class="timeLine-item_year">
+                                        <span>2018</span>
+                                    </div>
+                                    <div class="timeLine-item_event">
+                                        <div class="timeLine-item_icon">
+                                            <div class="iconBorder">
+                                                <img src="../resources/imgs/afterArrow01.png" alt="">
+                                                <img src="../resources/imgs/afterArrow01.png" alt="">
+                                            </div>
+                                            <img src="../resources/imgs/mihoyo-history05.png" alt="">
+                                        </div>
+                                        <b>2018.11</b>
+                                    </div>
+                                </li>
+                                <!-- 6 -->
+                                <li class="timeLine-item" id="FirstTimeLine-item" 
+                                    style="margin-right: 110px;">
+                                    <div class="timeLine-item_year">
+                                        <span>2020</span>
+                                    </div>
+                                    <div class="timeLine-item_event">
+                                        <div class="timeLine-item_icon">
+                                            <div class="iconBorder">
+                                                <img src="../resources/imgs/afterArrow01.png" alt="">
+                                                <img src="../resources/imgs/afterArrow01.png" alt="">
+                                            </div>
+                                            <img src="../resources/imgs/mihoyo-history06.png" alt="">
+                                        </div>
+                                        <b>2020.07</b>
+                                    </div>
+                                </li>
+                                <!-- 7 -->
+                                <li class="timeLine-item" id="FirstTimeLine-item" 
+                                    style="margin-right: 112px;">
+                                    <div class="timeLine-item_event">
+                                        <div class="timeLine-item_icon">
+                                            <div class="iconBorder" style="top: 10px;">
+                                                <img src="../resources/imgs/afterArrow01.png" alt="">
+                                                <img src="../resources/imgs/afterArrow01.png" alt="">
+                                            </div>
+                                            <img src="../resources/imgs/mihoyo-history07.png" alt="">
+                                        </div>
+                                        <b>2020.08</b>
+                                    </div>
+                                </li>
+                                <!-- 8 -->
+                                <li class="timeLine-item" id="FirstTimeLine-item"
+                                    style="margin-right: 4px;">
+                                    <div class="timeLine-item_event">
+                                        <div class="timeLine-item_icon">
+                                            <div class="iconBorder" style="top: 10px;">
+                                                <img src="../resources/imgs/afterArrow01.png" alt="">
+                                                <img src="../resources/imgs/afterArrow01.png" alt="">
+                                            </div>
+                                            <img src="../resources/imgs/mihoyo-history08.png" alt="">
+                                        </div>
+                                        <b>2020.09</b>
+                                    </div>
+                                </li>
+                                <!-- 9 -->
+                                <li class="timeLine-item" id="FirstTimeLine-item"
+                                    style="margin-right: 4px;">
+                                    <div class="timeLine-item_year">
+                                        <span>2023</span>
+                                    </div>
+                                    <div class="timeLine-item_event">
+                                        <div class="timeLine-item_icon">
+                                            <div class="iconBorder" style="top: 5px;">
+                                                <img src="../resources/imgs/afterArrow01.png" alt="">
+                                                <img src="../resources/imgs/afterArrow01.png" alt="">
+                                            </div>
+                                            <img src="../resources/imgs/mihoyo-history09.png" alt="">
+                                        </div>
+                                        <b>2023.04</b>
+                                    </div>
+                                </li>
+                                <!-- 10 -->
+                                <li class="timeLine-item" id="FirstTimeLine-item"
+                                    style="margin-right: 110px;">
+                                    <div class="timeLine-item_year">
+                                        <span>2024</span>
+                                    </div>
+                                    <div class="timeLine-item_event">
+                                        <div class="timeLine-item_icon">
+                                            <div class="iconBorder" style="top: 10px;">
+                                                <img src="../resources/imgs/afterArrow01.png" alt="">
+                                                <img src="../resources/imgs/afterArrow01.png" alt="">
+                                            </div>
+                                            <img src="../resources/imgs/mihoyo-history10.png" alt="">
+                                        </div>
+                                        <b>2024.7</b>
+                                    </div>
+                                </li>
+                                <!-- 11 -->
+                                <li class="timeLine-item" id="Last-item">
+                                    <div class="timeLine-item_event">
+                                        <div class="timeLine-item_icon">
+                                            <div class="iconBorder" style="visibility: visible; top: 10px;">
+                                                <img src="../resources/imgs/afterArrow01.png" alt="">
+                                                <img src="../resources/imgs/afterArrow01.png" alt="">
+                                            </div>
+                                            <img src="../resources/imgs/mihoyo-history11.png" alt="">
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="arrow02"><div class="arrowRight">
+                            <p>&lt;</p>
+                        </div></div>
+                        
+                    </div>
                 </div>
             <div class="write02">
                 <img src="../resources/imgs/aboutGameMask.png" alt="" style="
@@ -452,6 +667,232 @@
                     visibility: hidden;">
                 <img src="../resources/imgs/joinmiHoYoMask.png" alt="" style="height: 100%;">
             </div>
+            <div class="joinmiHoYoContent">
+                <!-- 左边========================================================= -->
+                <div class="joinmiHoYo-item_left">
+                    <div class="backgroundImg"></div>
+                    <div class="postCan">
+                        <img class="joinmiHoYo-item_leftPost" id="post01" src="../resources/imgs/personOfYayi.png" alt="">
+                        <img class="joinmiHoYo-item_leftPost" id="post02" src="../resources/imgs/personOfBuluoniya.png" alt="">
+                        <img class="joinmiHoYo-item_leftPost" id="post03" src="../resources/imgs/personOfQiyana.png" alt="">
+                    </div>
+                    
+                    <!-- 左边========================================================= -->
+                    <div class="joinmiHoYo-item_leftEventCan">
+                        <div class="joinmiHoYo-item_leftEventBox"></div>
+                        <div class="joinmiHoYo-item_leftEvent"></div>
+                        <div class="joinmiHoYo-item_leftEventShow">
+                            <div class="joinmiHoYo-item_bottonBackText">
+                                <span class="top">社会招聘</span>
+                                <span class="end">MORE INFORMATION</span>
+                            </div>
+                            <div class="joinmiHoYo-item_bottonBack">
+                                <div class="joinmiHoYo-item_bottonBackColor"></div>
+                                <div class="joinmiHoYo-item_bottonBackImg">
+                                    <img class="left" src="../resources/imgs/personOfArrow.png" alt="">
+                                    <img class="right" src="../resources/imgs/personOfArrow.png" alt="">
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="joinmiHoYo-item_leftEventCan">
+                        <div class="joinmiHoYo-item_leftEventBox"></div>
+                        <div class="joinmiHoYo-item_leftEvent"></div>
+                        <div class="joinmiHoYo-item_leftEventShow">
+                            <div class="joinmiHoYo-item_bottonBackText">
+                                <span class="top">校园招聘</span>
+                                <span class="end">MORE INFORMATION</span>
+                            </div>
+                            <div class="joinmiHoYo-item_bottonBack">
+                                <div class="joinmiHoYo-item_bottonBackColor"></div>
+                                <div class="joinmiHoYo-item_bottonBackImg">
+                                    <img class="left" src="../resources/imgs/personOfArrow.png" alt="">
+                                    <img class="right" src="../resources/imgs/personOfArrow.png" alt="">
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- 右边========================================================= -->
+                <div class="joinmiHoYo-item_right">
+                    <div class="joinmiHoYo-item_rightTitle">
+                        <span>加入米哈游</span><br>
+                        <b>development history</b>
+                    </div>
+                    <!-- 右边========================================================= -->
+                    <div class="joinmiHoYo-item_rightCan">
+                        <!-- 含背景图片 -->
+                        <!-- ---------------------------------------- 0 ---------------------------------------- -->
+                        <div class="join-wheel-card"> 
+                            <div class="join-wheel-card_event"></div>
+                            <div class="join-wheel-card_number">
+                                <img src="../resources/imgs/number01.png" alt="">
+                            </div>
+                            <div class="join-wheel-card_line"></div>
+                            <img class="more_btn" src="../resources/imgs/joinmiHoYoArrow.png" alt="">
+                            <!-- 一般显示 -->
+                            <div class="join-wheel-card_brief"> 
+                                <div class="join-wheel-card_title">技术宅拯救世界</div>
+                                <div class="join-wheel-card_content">
+                                    <div class="join-wheel-card_subtitle">技术密集型公司</div>
+                                    <div class="join-wheel-card_subtitle">精英化团队理念</div>
+                                    <div class="join-wheel-card_subtitle">面向未来产品</div>
+                                </div>
+                            </div>
+                            <!-- 隐藏与鼠标移入显示 -->
+                            <div class="join-wheel-card_desc">
+                                <div>
+                                    <div class="join-wheel-card_desc_title">技术密集型公司</div>
+                                    <div class="join-wheel-card_desc_content"><p>行业领先卡通渲染、人工智能、云游戏技术</p>
+                                        <p>不断探索前沿科技，是一件很酷的事情<p>
+                                        </div>
+                                </div>
+                                <div>
+                                    <div class="join-wheel-card_desc_title">精英化团队理念</div>
+                                    <div class="join-wheel-card_desc_content">
+                                        <p>高人才密度</p>
+                                        <p>全球化团队</p>
+                                        <p>
+                                            与优秀的人在一起，做<br>卓越的事情，获得最好的回报
+                                        </p>
+                                        
+                                        
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="join-wheel-card_desc_title">面向未来的产品</div>
+                                    <div class="join-wheel-card_desc_content">
+                                        <p>始终敢为人先</p>
+                                        <p>
+                                            致力于为用户提供美好的、超出想象的产品与体验
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 含背景图片 -->
+                        <!-- ---------------------------------------- 1 ---------------------------------------- -->
+                        <div class="join-wheel-card"> 
+                            <div class="join-wheel-card_event"></div>
+                            <div class="join-wheel-card_number">
+                                <img src="../resources/imgs/number02.png" alt="">
+                            </div>
+                            <div class="join-wheel-card_line"></div>
+                            <!-- 一般显示 -->
+                            <div class="join-wheel-card_brief"> 
+                                <div class="join-wheel-card_title">价值观</div>
+                                <div class="join-wheel-card_content">
+                                    <div class="join-wheel-card_subtitle">说到做到</div>
+                                    <div class="join-wheel-card_subtitle">有话直说</div>
+                                    <div class="join-wheel-card_subtitle">只认功劳</div>
+                                    <div class="join-wheel-card_subtitle">追求极致</div>
+                                </div>
+                            </div>
+                            <!-- 隐藏与鼠标移入显示 -->
+                        </div>
+
+                        <!-- 含背景图片 -->
+                        <!-- ---------------------------------------- 2 ---------------------------------------- -->
+                        <div class="join-wheel-card"> 
+                            <div class="join-wheel-card_event"></div>
+                            <div class="join-wheel-card_number">
+                                <img src="../resources/imgs/number03.png" alt="">
+                            </div>
+                            <div class="join-wheel-card_line"></div>
+                            <img class="more_btn" src="../resources/imgs/joinmiHoYoArrow.png" alt="">
+                            <!-- 一般显示 -->
+                            <div class="join-wheel-card_brief"> 
+                                <div class="join-wheel-card_title">快乐工作用心成长</div>
+                                <div class="join-wheel-card_content">
+                                    <div class="join-wheel-card_subtitle">体系化培训助力成长</div>
+                                    <div class="join-wheel-card_subtitle">简单纯粹的工作范围</div>
+                                </div>
+                            </div>
+                            <!-- 隐藏与鼠标移入显示 -->
+                            <div class="join-wheel-card_desc">
+                                <div>
+                                    <div class="join-wheel-card_desc_title">体系化培训助力成长</div>
+                                    <div class="join-wheel-card_desc_content">
+                                        <p>社招新人培训、校招新人培训</p>
+                                        <p>
+                                            【阿蒙森计划】Leaeder培训系列通用&专业课程/沙龙
+                                        </p>
+                                        
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="join-wheel-card_desc_title">简单纯粹的工作范围</div>
+                                    <div class="join-wheel-card_desc_content" style="margin-left: 10px; width: 100px;">
+                                        <p>扁平架构、决策高效</p>
+                                        <p>
+                                            问题驱动、务实专注让你在追求极致的路上更加轻松愉快
+                                        </p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 含背景图片 -->
+                        <!-- ---------------------------------------- 3 ---------------------------------------- -->
+                        <div class="join-wheel-card"> 
+                            <div class="join-wheel-card_event"></div>
+                            <div class="join-wheel-card_number">
+                                <img src="../resources/imgs/number04.png" alt="">
+                            </div>
+                            <div class="join-wheel-card_line"></div>
+                            <img class="more_btn" src="../resources/imgs/joinmiHoYoArrow.png" alt="">
+                            <!-- 一般显示 -->
+                            <div class="join-wheel-card_brief"> 
+                                <div class="join-wheel-card_title">优秀的薪酬福利</div>
+                                <div class="join-wheel-card_content">
+                                    <div class="join-wheel-card_subtitle">诚意满满薪金回报</div>
+                                    <div class="join-wheel-card_subtitle">丰富年节福利</div>
+                                    <div class="join-wheel-card_subtitle">贴心关爱员工健康</div>
+                                </div>
+                            </div>
+                            <!-- 隐藏与鼠标移入显示 -->
+                            <div class="join-wheel-card_desc">
+                                <div>
+                                    <div class="join-wheel-card_desc_title" style="text-wrap: nowrap;">诚意满满薪金回报</div>
+                                    <div class="join-wheel-card_desc_content">
+                                        <p>行业领先的薪酬</p>
+                                        <p>
+                                            每年两次的薪酬回顾机会
+                                            优秀的你值得有竞争力的回报
+                                        </p>
+                                        
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="join-wheel-card_desc_title" style="text-wrap: nowrap;">丰富年节福利</div>
+                                    <div class="join-wheel-card_desc_content">
+                                        <p>年会豪礼、多样周边</p>
+                                        <p>节日礼品</p>
+                                        <p>免费晚餐、零食与下午茶360度关爱你的生活</p>
+                                        
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="join-wheel-card_desc_title" style="text-wrap: nowrap;">贴心关爱员工健康</div>
+                                    <div class="join-wheel-card_desc_content">
+                                        <p>六险二金、家庭体检</p>
+                                        <p>EAP心里咨询、10天起步的年假</p>
+                                        <p>工作与生活平衡，让你在前进路上后顾无忧</p>
+                                    
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ----------------------------------------  ---------------------------------------- -->
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="pages" id="news">
             <div class="write04">
@@ -470,6 +911,101 @@
                     visibility: hidden;">
                 <img src="../resources/imgs/newsMask.png" alt="" style="height: 100%;">
             </div>
+
+            <div class="newsCan" style="transition: all 0.5s ease-out;">
+                <div class="newsTop">
+                    <div class="newsTopEvent"></div>
+                    <div class="newsTopContent">
+                        <!-- Left Content -->
+                        <div class="newsTopLeft">
+                            <div class="timerText">
+                                <div class="timerTextTop">
+                                    <span class="timerTextTopLeft">11</span><b>/</b><span class="timerTextTopRight">24</span>
+                                </div>
+                                <div class="timerTextUnder">2022</div>
+                            </div>
+                            
+                            <div class="discriptionsCan">
+                                <!-- 0 -->
+                                <div class="discriptions" id="discriptions03" style="transform: translateX(-120%);">
+                                    <div class="discriptionsTitle">
+                                        米哈游未成年人网络保护社会责任报告
+                                    </div>
+                                    <div class="discriptionsContent">
+                                        米哈游将持续践行“数实共善”的社会价值理念，积极投身未成年人网络保护事业，始终致力于发挥游戏的正向连接作用。
+                                    </div>
+                                </div>
+                                <!-- 1 -->
+                                <div class="discriptions" id="discriptions02" style="transform: translateX(-120%);">
+                                    <div class="discriptionsTitle">
+                                        米哈游正式通过ISO27001及ISO27701双重认证
+                                    </div>
+                                    <div class="discriptionsContent">
+                                        近日，米哈游正式通过ISO双认证，获得由国际知名专业风险管理服务机构英国标准协会(BSI)官方颁发的 ISO/IEC27001信息安全管理体系认证证书和ISO/IEC27701隐私信息管理体系认证证书。
+                                    </div>
+                                </div>
+                                <!-- 2 -->
+                                <div class="discriptions" id="discriptions01">
+                                    <div class="discriptionsTitle">
+                                        “你们好，见字如面！”——阅见未名：图书捐赠公益活动
+                                    </div>
+                                    <div class="discriptionsContent">
+                                        2022年，米哈游《未定事件簿》携手韬奋基金会，联合开展了「阅见未名」图书捐赠公益活动。在《未定事件簿》各位玩家的热心支持下，目前已向云南省大理白族自治州11所小学、云南省普洱市澜沧拉祜族自治县36所小学...
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="more-icon">
+                                <div class="discriptionsTextUnder">
+                                    READ MORE
+                                    <div class="discriptionsTextLine"></div>
+                                </div>
+                                <div class="discriptionsArrow">
+                                    <img src="../resources/imgs/newsArrow.png" alt="">
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <!-- Right Content -->
+                        <div class="newsTopRight">
+                            <div class="newsTopRightShowImg">
+                                <img class="newsTopRightShowImgFile"  src="../resources/imgs/newsBackImgWD.png" alt="">
+                            </div>
+                            <div class="newsTopRightBackCan">
+                                <img class="newsBackImgLineMask" src="../resources/imgs/newsBackImgmask.png" alt="">
+                                <div class="newsTopRightBackImgText">
+                                </div>
+                                <div class="newsTopRightBack">
+                                    <img class="newsTopRightBackFile" src="../resources/imgs/newsBackImgWD.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="newsBottom">
+                    <div class="BottonCan">
+                        <div class="newsBottom-item">
+                            <div class="newsBottom-item_number" id="number_1">
+                                <span>1</span>
+                            </div>
+                            <div class="newsBottom-item_number" id="number_2">
+                                <span>2</span>
+                            </div>
+                            <div class="newsBottom-item_number" id="number_3">
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="newsBottom-more">
+                            <span class="newsBottom-more_text">查看更多新闻</span>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+
+        <div class="pages" id="othersPages">
+
         </div>
     </div>
     <div class="footer"></div>
